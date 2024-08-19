@@ -1,6 +1,6 @@
 return {
-    {
-	'alx741/vim-rustfmt',
-	branch = 'master'
-    }
+	--	{
+	--		"alx741/vim-rustfmt",
+	--		branch = "master",
+	--	},
 }
