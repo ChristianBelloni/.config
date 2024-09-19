@@ -8,10 +8,6 @@ function cbzl
     cd ~/work/Client
 end
 
-function work
-    cd ~/work/Client && tmux
-end
-
 function side
     cd ~/side
 end
@@ -19,7 +15,3 @@ end
 set -gx ANDROID_HOME /Users/christianbelloni/Library/Android/sdk
 set -gx ANDROID_NDK_HOME /Users/christianbelloni/Library/Android/sdk/ndk/26.2.11394342
 fish_add_path /usr/local/bin
-fish_add_path $ANDROID_HOME/platform-tools
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc'; end
