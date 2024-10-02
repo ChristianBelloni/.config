@@ -17,9 +17,9 @@ function side
 end
 
 set -gx ANDROID_HOME /Users/christianbelloni/Library/Android/sdk
-set -gx ANDROID_NDK_HOME /Users/christianbelloni/Library/Android/sdk/ndk/26.2.11394342
+set -gx ANDROID_NDK_HOME /Users/christianbelloni/Library/Android/sdk/ndk/27.0.11718014
 fish_add_path /usr/local/bin
-fish_add_path $ANDROID_HOME/platform-tools
+# fish_add_path $ANDROID_HOME/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc'; end
