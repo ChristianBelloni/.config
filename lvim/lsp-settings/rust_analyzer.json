@@ -1,0 +1,4 @@
+{
+  "rust-analyzer.checkOnSave.enable": false,
+  "rust-analyzer.diagnostics.enable": false
+}
