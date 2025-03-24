@@ -26,3 +26,15 @@ vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a T
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function()
+        local mode = vim.api.nvim_get_mode().mode
+        local filetype = vim.bo.filetype
+        if vim.bo.modified == true and mode == 'n' then
+            vim.cmd('lua vim.lsp.buf.format()')
+        else
+        end
+    end
+})
+
