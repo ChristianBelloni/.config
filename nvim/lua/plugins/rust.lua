@@ -8,6 +8,12 @@ return {
 		tools = {
 			float_win_config = {
 				auto_focus = true,
+                autoSetHints = true,
+                inlay_hints = {
+                    show_parameter_hints = true,
+                    parameter_hints_prefix = "in: ",
+                    other_hints_prefix = "out: "
+                },
 			},
 		},
 		-- LSP configuration
@@ -45,6 +51,25 @@ return {
 					{ stylize_markdown = false }
 				),
 			},
+            settings = {
+                ["rust-analyzer"] = {
+                    cargo = { 
+                        allFeatures = true,
+                        allTargets = true
+                    },
+                    checkOnSave = {
+                        command = "clippy",
+                        allFeatures = true,
+                        allTargets = true
+                    },
+                    inlayHints = {
+                        lifetimeElisionHints = {
+                            enable = true,
+                            useParameterNames = true
+                        }
+                    }
+                }
+            }
 		},
 		-- DAP configuration
 		dap = {},

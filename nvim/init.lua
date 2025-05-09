@@ -1,6 +1,5 @@
 require("config.lazy")
 
-vim.cmd.colorscheme "catppuccin"
 
 vim.api.nvim_create_augroup("neotree", {})
 vim.api.nvim_create_autocmd("UiEnter", {
@@ -15,10 +14,11 @@ vim.api.nvim_create_autocmd("UiEnter", {
 })
 
 vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<enter>", {})
-vim.api.nvim_set_keymap("n", "<leader>fr", ":lua require('telescope.builtin').lsp_references()<enter>", {} )
-vim.api.nvim_set_keymap("n", "<leader>fd", ":lua require('telescope.builtin').lsp_definitions()<enter>", {} )
+vim.api.nvim_set_keymap("n", "<leader>fr", ":lua require('telescope.builtin').lsp_references()<enter>", {})
+vim.api.nvim_set_keymap("n", "<leader>fd", ":lua require('telescope.builtin').lsp_definitions()<enter>", {})
+vim.api.nvim_set_keymap("n", "<leader>r", ":lua vim.lsp.buf.rename()<enter>", {})
 
-vim.api.nvim_set_keymap("n", "<leader><leader>", ":bnext<enter>", {})
+vim.keymap.set('n', '<leader><leader>', '<c-^>')
 
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
@@ -38,3 +38,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
 })
 
+vim.cmd ":set nu rnu"
+
+require("mason").setup()
+require("mason-lspconfig").setup()
+vim.g.diagnostic_active = true
+vim.diagnostic.config({ virtual_text = true })
+
+vim.cmd "set termguicolors"
+vim.cmd "colorscheme duskfox"
