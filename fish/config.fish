@@ -16,6 +16,22 @@ function side
     cd ~/side
 end
 
+function pmd
+    pandoc -s $argv[1].md -o $argv[1].pdf -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V toccolor=gray
+end
+
+function git_work
+    gh auth logout
+    git config --global user.email "christian.belloni@babyloncloud.com"
+    gh auth login
+end
+
+function git_side
+    gh auth logout
+    git config --global user.email "christianbelloni@hotmail.com"
+    gh auth login
+end
+
 # alias nvim="lvim"
 
 set -gx ANDROID_HOME /Users/christianbelloni/Library/Android/sdk
