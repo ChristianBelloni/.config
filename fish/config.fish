@@ -35,7 +35,7 @@ end
 # alias nvim="lvim"
 
 set -gx ANDROID_HOME /Users/christianbelloni/Library/Android/sdk
-set -gx ANDROID_NDK_HOME /Users/christianbelloni/Library/Android/sdk/ndk/27.0.11718014
+set -gx ANDROID_NDK_HOME /Users/christianbelloni/Library/Android/sdk/ndk/28.2.13676358
 fish_add_path /usr/local/bin
 # fish_add_path $ANDROID_HOME/platform-tools
 fish_add_path /Users/christianbelloni/.local/bin
