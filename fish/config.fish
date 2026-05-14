@@ -42,5 +42,14 @@ fish_add_path /Users/christianbelloni/.local/bin
 
 fish_add_path /Users/christianbelloni/flutter/bin
 
+# set -gx AWS_ACCESS_KEY_ID 12aUiLNQHDVfbgPv4Hv6
+# set -gx AWS_SECRET_ACCESS_KEY jX3GwZsvERPVa5spKPUft9QKyyuYpk2dYXOqPQ4L
+# set -gx SCCACHE_BUCKET sccache
+# set -gx SCCACHE_REGION auto
+# set -gx SCCACHE_ENDPOINT s3.babyloncloud.com:8081
+# set -gx SCCACHE_S3_USE_SSL false
+# set -gx RUSTC_WRAPPER $(which sccache)
+# set -gx SCCACHE_S3_USE_SSL false
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/christianbelloni/Downloads/google-cloud-sdk/path.fish.inc'; end

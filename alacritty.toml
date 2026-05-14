@@ -2,8 +2,8 @@
 program = "/opt/homebrew/bin/fish"
 
 [window]
-startup_mode = "SimpleFullscreen"
-decorations = "buttonless"
+# startup_mode = "SimpleFullscreen"
+# decorations = "buttonless"
 blur = true
 opacity = 0.83
 dynamic_padding = true
